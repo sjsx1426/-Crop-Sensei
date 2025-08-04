@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Sensei – Smart Farming Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 Crop Sensei</h1>
+        <p>Your Smart Farming Crop Prediction Tool</p>
+
+        <form id="cropForm">
+            <label for="soil">Soil Type:</label>
+            <select id="soil">
+                <option value="black">Black Soil</option>
+                <option value="red">Red Soil</option>
+                <option value="clay">Clay Soil</option>
+                <option value="sandy">Sandy Soil</option>
+            </select>
+
+            <label for="season">Season:</label>
+            <select id="season">
+                <option value="summer">Summer</option>
+                <option value="monsoon">Monsoon</option>
+                <option value="winter">Winter</option>
+            </select>
+
+            <label for="location">Location (e.g., Tamil Nadu):</label>
+            <input type="text" id="location" placeholder="e.g., Tamil Nadu" />
+
+            <label for="water">Water Availability:</label>
+            <select id="water">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <button type="submit">Predict Best Crops</button>
+        </form>
+
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Crop Sensei AI Chatbot</h3>
+            <button id="closeChat" class="close-button">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">Hello! I'm your Crop Sensei AI. How can I assist you with farming today?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Ask me anything about crops..." />
+            <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <button id="openChat" class="open-chat-button"><i class="fas fa-comment-dots"></i> Chat with AI</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
